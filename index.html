@@ -3,236 +3,245 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grimm Tattoo Istanbul Demo</title>
+    <title>Yapbi Tattoo & Piercing</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header" data-header>
+    <header class="site-header">
       <div class="header-left">
-        <a class="brand-mark" href="#home" aria-label="Grimm Tattoo home">
-          <img
-            src="https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/grimm-logo-150x150.webp"
-            alt="Grimm Tattoo logo"
-          />
+        <a class="brand-mark" href="#home" aria-label="Yapbi home">
+          <img src="assets/yapbi/logo.jpg" alt="Yapbi Tattoo & Piercing logo" />
         </a>
-
         <nav class="social-nav" aria-label="Social links">
-          <a href="https://www.instagram.com/grimmistanbul/" aria-label="Instagram" target="_blank" rel="noreferrer">
+          <a
+            class="instagram-link"
+            href="https://www.instagram.com/yapbi_tattoo_piercing/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram"
+          >
             <span class="instagram-icon" aria-hidden="true"></span>
           </a>
-          <a href="https://wa.me/902122936142" aria-label="WhatsApp" target="_blank" rel="noreferrer">
+          <a
+            class="whatsapp-link"
+            href="https://wa.me/905519494944"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="WhatsApp"
+          >
             <i data-lucide="message-circle"></i>
-          </a>
-          <button class="lang-toggle" type="button" data-lang-toggle aria-label="Change language">
-            <span data-lang-current>EN</span>
-            <i data-lucide="languages"></i>
-          </button>
-          <a href="#reservation" aria-label="Reservation">
-            <i data-lucide="calendar-days"></i>
           </a>
         </nav>
       </div>
 
-      <a class="wordmark" href="#home">Grimm Tattoo</a>
+      <a class="wordmark" href="#home">YAPBITATTOO & PIERCING</a>
 
-      <button class="icon-button menu-button" type="button" aria-label="Open menu" data-menu-open>
-        <i data-lucide="menu"></i>
-      </button>
+      <div class="header-actions">
+        <button class="icon-button lang-toggle" type="button" data-lang-toggle aria-label="Change language">
+          <span data-lang-current>EN</span>
+          <i data-lucide="languages"></i>
+        </button>
+        <button class="icon-button menu-button" type="button" aria-label="Open menu" data-menu-open>
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
     </header>
 
     <aside class="side-menu" data-menu aria-hidden="true">
       <button class="icon-button close-button" type="button" aria-label="Close menu" data-menu-close>
         <i data-lucide="x"></i>
       </button>
-      <div class="side-menu__content">
-        <img
-          class="side-menu__logo"
-          src="https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/Grimm-Tattoo-4-1.webp"
-          alt="Grimm Tattoo"
-        />
-        <nav class="side-menu__links" aria-label="Main menu">
-          <a href="#home" data-menu-link data-i18n="navHome">Home</a>
-          <a href="#reservation" data-menu-link data-i18n="navReservation">Reservation</a>
-          <a href="#artists" data-menu-link data-i18n="navArtists">Artists</a>
-          <a href="#information" data-menu-link data-i18n="navInformation">Information</a>
-        </nav>
-        <div class="side-menu__booking">
-          <span data-i18n="menuReady">Ready for the next piece?</span>
-          <button class="primary-button" type="button" data-book-general data-i18n="bookConsultation">Book a consultation</button>
-        </div>
-      </div>
+      <img class="side-menu__logo" src="assets/yapbi/logo.jpg" alt="Yapbi Tattoo & Piercing" />
+      <nav class="side-menu__links" aria-label="Main menu">
+        <a href="#home" data-menu-link data-i18n="navHome">Home</a>
+        <a href="#information" data-menu-link data-i18n="navInformation">Information</a>
+        <a href="#pricing" data-menu-link data-i18n="navPricing">Pricing</a>
+        <a href="#reservation" data-menu-link data-i18n="navReservation">Reservation</a>
+        <a href="#gallery" data-menu-link data-i18n="navGallery">Gallery</a>
+      </nav>
+      <a
+        class="primary-button"
+        href="https://www.instagram.com/yapbi_tattoo_piercing/"
+        target="_blank"
+        rel="noreferrer"
+        data-i18n="dmForBooking"
+      >
+        DM for booking
+      </a>
     </aside>
-    <div class="menu-scrim" data-menu-close></div>
+    <button class="menu-scrim" type="button" aria-label="Close navigation overlay" data-menu-close></button>
 
     <main id="home">
       <section class="hero section-pad">
         <div class="hero__copy reveal-left">
-          <p class="eyebrow" data-i18n="heroEyebrow">Tattoo studio based in Beyoglu</p>
-          <h1>GRIMM<br />TATTOO</h1>
-          <div class="hero__details">
-            <a href="https://maps.google.com/?q=Asmalı+Mescit,+Nergis+Sk.+No:2,+34420+Beyoğlu/İstanbul" target="_blank" rel="noreferrer">
-              Asmalı Mescit, Nergis Sk. No:2, 34420
+          <p class="eyebrow" data-i18n="heroEyebrow">Besiktas tattoo and piercing studio</p>
+          <h1 data-i18n-html="heroTitle">Minimal lines.<br />Clean piercing.</h1>
+          <p class="hero__lead" data-i18n="heroLead">
+            Fine-line tattoos, handwritten pieces, small custom designs, and professional piercing in Besiktas Carsi.
+          </p>
+          <div class="hero__actions">
+            <a class="primary-button" href="#reservation" data-i18n="bookAppointment">Book appointment</a>
+            <a class="ghost-button" href="#gallery" data-i18n="viewWorks">View works</a>
+          </div>
+          <div class="location-strip">
+            <i data-lucide="map-pin"></i>
+            <a href="https://g.page/r/CcAxWVAVTXXYEBA" target="_blank" rel="noreferrer">
+              <strong>Besiktas Carsi</strong>
+              <span>Sinanpasa Is Merkezi, Floor 2</span>
             </a>
-            <span>Beyoğlu/Istanbul</span>
-            <span>Monday - Saturday 11:00 - 20:00</span>
-            <a href="tel:+902122936142">+90 (212) 293 61 42</a>
-            <a href="mailto:grimmistanbul@gmail.com">grimmistanbul@gmail.com</a>
           </div>
         </div>
 
-        <div class="hero__visual reveal-right rotating-frame" data-rotator="hero">
-          <img class="active logo-slide" src="assets/grimm-intro-logo.png" alt="Grimm Tattoo hand skull logo" />
-          <img src="https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/unnamed-1-scaled.webp" alt="Large back tattoo" />
-          <img src="https://www.grimmtattooistanbul.com/wp-content/uploads/2025/08/9bf7d0d0-e858-4b70-aba0-5774276ad3ca.jpg" alt="Wolf tattoo close up" />
-          <img src="https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/image10.jpeg" alt="Tattoo detail" />
+        <div class="hero__visual reveal-right rotating-frame" data-rotator>
+          <img class="active" src="assets/yapbi/work-03.jpg" alt="Minimal handwritten tattoo" />
+          <img src="assets/yapbi/work-07.jpg" alt="Minimal hand tattoo" />
+          <img src="assets/yapbi/work-02.jpg" alt="Dragon tattoo" />
+          <img src="assets/yapbi/work-06.jpg" alt="Belly piercing" />
         </div>
       </section>
 
-      <section class="split-feature section-pad">
-        <div class="feature-image reveal-left rotating-frame" data-rotator="feature">
-          <img class="active" src="https://www.grimmtattooistanbul.com/wp-content/uploads/2025/08/8547956c-67ca-4c6c-afa0-dd8e07f2570e.jpg" alt="Tattoo detail" />
-          <img src="https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/image5-2.jpeg" alt="Tattoo detail" />
-          <img src="https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_0805-scaled.webp" alt="Realism tattoo" />
-        </div>
+      <section class="quick-info">
+        <a href="https://g.page/r/CcAxWVAVTXXYEBA" target="_blank" rel="noreferrer">
+          <i data-lucide="map"></i>
+          <span>Besiktas / Istanbul</span>
+        </a>
+        <a href="https://www.instagram.com/yapbi_tattoo_piercing/" target="_blank" rel="noreferrer">
+          <span class="instagram-icon small-icon" aria-hidden="true"></span>
+          <span>@yapbi_tattoo_piercing</span>
+        </a>
+        <a href="https://wa.me/905519494944" target="_blank" rel="noreferrer">
+          <i data-lucide="message-circle"></i>
+          <span>+90 551 949 49 44</span>
+        </a>
+      </section>
 
+      <section class="split-feature section-pad" id="information">
+        <div class="feature-image rotating-frame reveal-left" data-rotator>
+          <img class="active" src="assets/yapbi/work-08.jpg" alt="Handwritten tattoo detail" />
+          <img src="assets/yapbi/work-10.jpg" alt="Minimal quote tattoo" />
+          <img src="assets/yapbi/work-11.jpg" alt="Fine line tattoo detail" />
+        </div>
         <div class="experience reveal-right">
-          <p class="section-kicker" data-i18n="experienceTitle">The best tattoo experience</p>
-          <div class="experience-grid">
+          <p class="section-kicker" data-i18n="infoTitle">Tattoo and piercing, kept simple.</p>
+          <p class="section-copy" data-i18n="infoText">
+            Yapbi focuses on clean placement, fine line details, minimal designs, and sterile professional piercing. Share your reference, size, placement, and date to plan the appointment.
+          </p>
+          <div class="service-grid">
             <article>
-              <i data-lucide="pen-tool"></i>
-              <h3 data-i18n="bestProducts">Best Products</h3>
-              <p data-i18n="bestProductsText">Top-quality inks and equipment for vibrant, long-lasting tattoos.</p>
+              <i data-lucide="pen-line"></i>
+              <h3 data-i18n="fineLine">Fine-line tattoo</h3>
+              <p data-i18n="fineLineText">Small symbols, handwritten text, delicate placement, and custom minimal pieces.</p>
+            </article>
+            <article>
+              <i data-lucide="sparkles"></i>
+              <h3 data-i18n="allStyles">All styles</h3>
+              <p data-i18n="allStylesText">Minimal work is the main feel, with flexible tattoo styles by request.</p>
             </article>
             <article>
               <i data-lucide="gem"></i>
-              <h3 data-i18n="customDesign">Custom Design</h3>
-              <p data-i18n="customDesignText">Artists build personal designs around your body, story, and style.</p>
-            </article>
-            <article>
-              <i data-lucide="badge-check"></i>
-              <h3 data-i18n="professionalArtists">Professional Artists</h3>
-              <p data-i18n="professionalArtistsText">Experienced hands, careful placement, and strong visual direction.</p>
+              <h3 data-i18n="piercing">Piercing</h3>
+              <p data-i18n="piercingText">Ear, nose, belly, and other piercing options with fresh jewelry choices.</p>
             </article>
             <article>
               <i data-lucide="shield-check"></i>
-              <h3 data-i18n="sterile">Sterile Environment</h3>
-              <p data-i18n="sterileText">A clean studio process from consultation to aftercare.</p>
+              <h3 data-i18n="sterile">Sterile setup</h3>
+              <p data-i18n="sterileText">Clean tools, professional process, and aftercare guidance before you leave.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="artists section-pad" id="artists">
-        <div class="section-heading compact-heading reveal-left">
-          <p class="eyebrow" data-i18n="artistsEyebrow">Artists</p>
-          <h2 data-i18n="artistsTitle">Our Artists</h2>
-        </div>
-        <div class="artist-grid" data-artist-grid></div>
-      </section>
-
-      <section class="gallery section-pad" id="gallery">
-        <div class="section-heading compact-heading reveal-left">
-          <p class="eyebrow">Instagram</p>
-          <h2 data-i18n="galleryTitle">Tattoo Gallery</h2>
-        </div>
-        <div class="gallery-grid reveal-right" data-gallery></div>
-        <div class="gallery-actions reveal-left">
-          <button class="ghost-button" type="button" data-see-more-gallery data-i18n="seeMoreGallery">See more designs</button>
-        </div>
-      </section>
-
-      <section class="artist-page section-pad" id="artist-page" data-artist-page hidden></section>
-
-      <section class="information section-pad" id="information">
-        <div class="info-copy reveal-left">
-          <p class="eyebrow" data-i18n="infoEyebrow">Information</p>
-          <h2 data-i18n="infoTitle">Free consultation</h2>
-          <p data-i18n="infoText">
-            Share the design, size, placement, and preferred date. The studio can help plan the right artist and appointment.
+      <section class="pricing section-pad" id="pricing">
+        <div class="section-heading reveal-left">
+          <p class="eyebrow" data-i18n="pricingEyebrow">Pricing</p>
+          <h2 data-i18n="pricingTitle">Clear starting points</h2>
+          <p data-i18n="pricingText">
+            Final pricing depends on design detail, size, placement, jewelry choice, and session time. Send a reference image for the cleanest quote.
           </p>
         </div>
-        <div class="info-list reveal-right">
-          <a class="info-card" href="https://maps.google.com/?q=Asmalı+Mescit,+Nergis+Sk.+No:2,+34420+Beyoğlu/İstanbul" target="_blank" rel="noreferrer">
-            <i data-lucide="map-pin"></i>
-            <span>
-              <strong data-i18n="locationTitle">Location</strong>
-              <small>Asmalı Mescit, Nergis Sk. No:2, 34420 Beyoğlu/Istanbul</small>
-            </span>
-          </a>
-          <article class="info-card">
-            <i data-lucide="clock-3"></i>
-            <span>
-              <strong data-i18n="hoursTitle">Working hours</strong>
-              <small data-i18n="hoursText">Monday - Saturday 11:00 - 20:00</small>
-            </span>
+        <div class="pricing-grid reveal-right">
+          <article>
+            <span>Tattoo</span>
+            <h3 data-i18n="minimalTattoo">Minimal tattoo</h3>
+            <p data-i18n="minimalTattooText">Fine-line symbols, initials, dates, short text, and small custom pieces.</p>
+            <strong data-i18n="quoteByDesign">Quote by design</strong>
           </article>
-          <a class="info-card" href="tel:+902122936142">
-            <i data-lucide="phone"></i>
-            <span>
-              <strong data-i18n="phoneTitle">Phone</strong>
-              <small>+90 (212) 293 61 42</small>
-            </span>
-          </a>
-          <a class="info-card" href="mailto:grimmistanbul@gmail.com">
-            <i data-lucide="mail"></i>
-            <span>
-              <strong data-i18n="mailTitle">Email</strong>
-              <small>grimmistanbul@gmail.com</small>
-            </span>
-          </a>
+          <article>
+            <span>Piercing</span>
+            <h3 data-i18n="piercingService">Piercing service</h3>
+            <p data-i18n="piercingServiceText">Piercing appointment with sterile setup and jewelry options at the studio.</p>
+            <strong data-i18n="quoteByJewelry">Quote by jewelry</strong>
+          </article>
+          <article>
+            <span>Consultation</span>
+            <h3 data-i18n="customPlanning">Custom planning</h3>
+            <p data-i18n="customPlanningText">Send size, placement, style reference, and preferred date before booking.</p>
+            <strong data-i18n="dmForPrice">DM for price</strong>
+          </article>
         </div>
       </section>
 
       <section class="reservation section-pad" id="reservation">
         <div class="reservation__intro reveal-left">
           <p class="eyebrow" data-i18n="reservationEyebrow">Reservation</p>
-          <h2 data-i18n="reservationTitle">Book an appointment</h2>
-          <p data-i18n="reservationText">Choose an artist, leave the project idea, and the studio can follow up with available times.</p>
+          <h2 data-i18n="reservationTitle">Plan your next piece</h2>
+          <p data-i18n="reservationText">
+            Use the form for the demo website. In the live version this can send directly to Instagram DM, WhatsApp, email, or a booking system.
+          </p>
         </div>
         <form class="booking-form reveal-right" data-booking-form>
           <label>
-            <span>First name</span>
-            <input name="firstName" type="text" autocomplete="given-name" required />
+            <span data-i18n="nameLabel">Name</span>
+            <input name="name" type="text" autocomplete="name" required />
           </label>
           <label>
-            <span>Last name</span>
-            <input name="lastName" type="text" autocomplete="family-name" />
-          </label>
-          <label>
-            <span>Phone</span>
+            <span data-i18n="phoneLabel">Phone</span>
             <input name="phone" type="tel" autocomplete="tel" required />
           </label>
           <label>
-            <span>Email</span>
-            <input name="email" type="email" autocomplete="email" />
-          </label>
-          <label>
-            <span>Artist</span>
-            <select name="artist" data-artist-select>
-              <option>Any artist</option>
+            <span data-i18n="serviceLabel">Service</span>
+            <select name="service">
+              <option>Tattoo</option>
+              <option>Piercing</option>
+              <option>Tattoo + Piercing</option>
             </select>
           </label>
-          <label class="wide">
-            <span>Message</span>
-            <textarea name="message" rows="5" placeholder="Style, size, placement, preferred date..."></textarea>
+          <label>
+            <span data-i18n="dateLabel">Preferred date</span>
+            <input name="date" type="date" />
           </label>
-          <button class="primary-button wide" type="submit">Book an appointment</button>
+          <label class="wide">
+            <span data-i18n="messageLabel">Idea / placement / size</span>
+            <textarea name="message" rows="5" placeholder="Example: small handwritten tattoo on inner arm..."></textarea>
+          </label>
+          <button class="primary-button wide" type="submit" data-i18n="sendRequest">Prepare request</button>
           <p class="form-note" data-form-note aria-live="polite"></p>
         </form>
+      </section>
+
+      <section class="gallery section-pad" id="gallery">
+        <div class="section-heading reveal-left">
+          <p class="eyebrow">Instagram</p>
+          <h2 data-i18n="galleryTitle">Gallery</h2>
+          <p data-i18n="galleryText">Recent tattoo and piercing work from Yapbi's Instagram.</p>
+        </div>
+        <div class="gallery-grid reveal-right" data-gallery></div>
+        <div class="gallery-actions reveal-left">
+          <button class="ghost-button" type="button" data-see-more-gallery data-i18n="seeMore">See more</button>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
-      <span>Asmalı Mescit, Nergis Sk. No:2, 34420 Beyoğlu/Istanbul</span>
-      <span>Booking hours: Monday - Saturday 11:00 - 20:00</span>
-      <span>Call us: +90 (212) 293 61 42</span>
-      <span>Mail us: grimmistanbul@gmail.com</span>
+      <span>Yapbitattoo & Piercing</span>
+      <a href="https://g.page/r/CcAxWVAVTXXYEBA" target="_blank" rel="noreferrer">Besiktas Carsi, Sinanpasa Is Merkezi, Floor 2</a>
+      <a href="https://www.instagram.com/yapbi_tattoo_piercing/" target="_blank" rel="noreferrer">@yapbi_tattoo_piercing</a>
     </footer>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>

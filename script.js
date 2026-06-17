@@ -1,199 +1,134 @@
-const artists = [
-  {
-    id: "ahmet",
-    name: "Ahmet",
-    role: "Dark work realism",
-    image: "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/unnamed-1-768x1024.webp",
-    bio: "A Beyoglu tattoo artist with a rebellious spirit, focused on dark work realism since 2018.",
-    works: [
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_0805-768x1024.webp",
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_1725-768x1024.webp",
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_2073-768x1024.jpeg",
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_2256-1-768x1024.jpeg",
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_2810-768x1024.jpeg",
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_6646-768x1024.webp",
-    ],
-  },
-  {
-    id: "emre",
-    name: "Emre",
-    role: "Founder and tattoo artist",
-    image: "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_2462-576x1024.webp",
-    bio: "Founder of Grimm Tattoo Istanbul, tattooing since 1995 with a strong hand for bold personal pieces.",
-    works: [
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_4339-768x1024.webp",
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_7184-768x1024.jpeg",
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_7185-1024x768.webp",
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_7186-819x1024.webp",
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_7911-768x1024.webp",
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_9973-576x1024.webp",
-    ],
-  },
-  {
-    id: "ugur",
-    name: "Ugur",
-    role: "Award-winning tattoo artist",
-    image: "https://www.grimmtattooistanbul.com/wp-content/uploads/2020/02/Leo-Zamora.jpg",
-    bio: "Ugur Avcu has been tattooing professionally since 2010 and has participated in national and international expos.",
-    works: [
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/image0-2.jpeg",
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/image1-1.jpeg",
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/image2-2.jpeg",
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/image3-2.jpeg",
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/image4-1.jpeg",
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/image7-1.jpeg",
-    ],
-  },
-  {
-    id: "melih",
-    name: "Melih",
-    role: "Black and grey tattoo artist",
-    image: "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/05/1ccfb47c-e558-4d0a-bc92-6e68e0ff7f7c-300x300.jpg",
-    bio: "A Grimm Tattoo artist with a clean black and grey style and a calm, precise approach to each project.",
-    works: [
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/05/2160c961-5048-4682-a7ac-d9857c2e4e07-768x1024.jpg",
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/05/21e23c0e-bd2d-4428-b0a9-f4dac482e731-768x1024.jpg",
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/05/2726cbe9-43a8-4d62-8a10-97e898a94751-768x1024.jpg",
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/05/3d08dc47-c65c-4a31-86aa-027f69fe2221-768x1024.jpg",
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/05/4af7d548-f38a-44d2-a380-58befc354464-768x1024.jpg",
-      "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/05/74d0d48e-cc85-4e34-ba7d-6a6903999d91-768x1024.jpg",
-    ],
-  },
-];
-
 const galleryImages = [
-  "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/08/9bf7d0d0-e858-4b70-aba0-5774276ad3ca-768x1024.jpg",
-  "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/image10.jpeg",
-  "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_2256-1-768x1024.jpeg",
-  "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/05/4db10ef9-c807-4fc4-9150-3769e2a393f3.jpg",
-  "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_7186-819x1024.webp",
-  "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/image4-1.jpeg",
-  "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/05/74d0d48e-cc85-4e34-ba7d-6a6903999d91-768x1024.jpg",
-  "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_0805-768x1024.webp",
-  "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_1725-768x1024.webp",
-  "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_2073-768x1024.jpeg",
-  "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_2810-768x1024.jpeg",
-  "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/image0-2.jpeg",
-  "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/image1-1.jpeg",
-  "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/image2-2.jpeg",
-  "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/05/2160c961-5048-4682-a7ac-d9857c2e4e07-768x1024.jpg",
-  "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/05/21e23c0e-bd2d-4428-b0a9-f4dac482e731-768x1024.jpg",
-  "https://www.grimmtattooistanbul.com/wp-content/uploads/2025/05/2726cbe9-43a8-4d62-8a10-97e898a94751-768x1024.jpg",
+  "assets/yapbi/work-03.jpg",
+  "assets/yapbi/work-07.jpg",
+  "assets/yapbi/work-08.jpg",
+  "assets/yapbi/work-10.jpg",
+  "assets/yapbi/work-11.jpg",
+  "assets/yapbi/work-12.jpg",
+  "assets/yapbi/work-02.jpg",
+  "assets/yapbi/work-04.jpg",
+  "assets/yapbi/work-06.jpg",
+  "assets/yapbi/work-09.jpg",
+  "assets/yapbi/work-01.jpg",
+  "assets/yapbi/work-05.jpg",
 ];
 
 const translations = {
   en: {
     navHome: "Home",
-    navReservation: "Reservation",
-    navArtists: "Artists",
     navInformation: "Information",
-    menuReady: "Ready for the next piece?",
-    bookConsultation: "Book a consultation",
-    heroEyebrow: "Tattoo studio based in Beyoglu",
-    experienceTitle: "The best tattoo experience",
-    bestProducts: "Best Products",
-    bestProductsText: "Top-quality inks and equipment for vibrant, long-lasting tattoos.",
-    customDesign: "Custom Design",
-    customDesignText: "Artists build personal designs around your body, story, and style.",
-    professionalArtists: "Professional Artists",
-    professionalArtistsText: "Experienced hands, careful placement, and strong visual direction.",
-    sterile: "Sterile Environment",
-    sterileText: "A clean studio process from consultation to aftercare.",
-    artistsEyebrow: "Artists",
-    artistsTitle: "Our Artists",
-    galleryTitle: "Tattoo Gallery",
-    seeMoreGallery: "See more designs",
-    infoEyebrow: "Information",
-    infoTitle: "Free consultation",
-    infoText: "Share the design, size, placement, and preferred date. The studio can help plan the right artist and appointment.",
-    locationTitle: "Location",
-    hoursTitle: "Working hours",
-    hoursText: "Monday - Saturday 11:00 - 20:00",
-    phoneTitle: "Phone",
-    mailTitle: "Email",
+    navPricing: "Pricing",
+    navReservation: "Reservation",
+    navGallery: "Gallery",
+    dmForBooking: "DM for booking",
+    heroEyebrow: "Besiktas tattoo and piercing studio",
+    heroTitle: "Minimal lines.<br />Clean piercing.",
+    heroLead: "Fine-line tattoos, handwritten pieces, small custom designs, and professional piercing in Besiktas Carsi.",
+    bookAppointment: "Book appointment",
+    viewWorks: "View works",
+    infoTitle: "Tattoo and piercing, kept simple.",
+    infoText:
+      "Yapbi focuses on clean placement, fine line details, minimal designs, and sterile professional piercing. Share your reference, size, placement, and date to plan the appointment.",
+    fineLine: "Fine-line tattoo",
+    fineLineText: "Small symbols, initials, dates, short text, and small custom pieces.",
+    allStyles: "All styles",
+    allStylesText: "Minimal work is the main feel, with flexible tattoo styles by request.",
+    piercing: "Piercing",
+    piercingText: "Ear, nose, belly, and other piercing options with fresh jewelry choices.",
+    sterile: "Sterile setup",
+    sterileText: "Clean tools, professional process, and aftercare guidance before you leave.",
+    pricingEyebrow: "Pricing",
+    pricingTitle: "Clear starting points",
+    pricingText:
+      "Final pricing depends on design detail, size, placement, jewelry choice, and session time. Send a reference image for the cleanest quote.",
+    minimalTattoo: "Minimal tattoo",
+    minimalTattooText: "Fine-line symbols, initials, dates, short text, and small custom pieces.",
+    quoteByDesign: "Quote by design",
+    piercingService: "Piercing service",
+    piercingServiceText: "Piercing appointment with sterile setup and jewelry options at the studio.",
+    quoteByJewelry: "Quote by jewelry",
+    customPlanning: "Custom planning",
+    customPlanningText: "Send size, placement, style reference, and preferred date before booking.",
+    dmForPrice: "DM for price",
     reservationEyebrow: "Reservation",
-    reservationTitle: "Book an appointment",
-    reservationText: "Choose an artist, leave the project idea, and the studio can follow up with available times.",
+    reservationTitle: "Plan your next piece",
+    reservationText:
+      "Use the form for the demo website. In the live version this can send directly to Instagram DM, WhatsApp, email, or a booking system.",
+    nameLabel: "Name",
+    phoneLabel: "Phone",
+    serviceLabel: "Service",
+    dateLabel: "Preferred date",
+    messageLabel: "Idea / placement / size",
+    sendRequest: "Prepare request",
+    galleryTitle: "Gallery",
+    galleryText: "Recent tattoo and piercing work from Yapbi's Instagram.",
+    seeMore: "See more",
+    formReady: "your request is ready. In the final version this button can send it to Instagram DM or WhatsApp.",
   },
   tr: {
     navHome: "Ana sayfa",
-    navReservation: "Rezervasyon",
-    navArtists: "Sanatçılar",
     navInformation: "Bilgi",
-    menuReady: "Yeni dövmen için hazır mısın?",
-    bookConsultation: "Danışma randevusu al",
-    heroEyebrow: "Beyoğlu merkezli dövme stüdyosu",
-    experienceTitle: "En iyi dövme deneyimi",
-    bestProducts: "Kaliteli ürünler",
-    bestProductsText: "Canlı ve uzun ömürlü dövmeler için kaliteli boya ve ekipman.",
-    customDesign: "Özel tasarım",
-    customDesignText: "Sanatçılar tasarımı vücuduna, hikayene ve tarzına göre hazırlar.",
-    professionalArtists: "Profesyonel sanatçılar",
-    professionalArtistsText: "Deneyimli eller, doğru yerleşim ve güçlü görsel yönlendirme.",
-    sterile: "Steril ortam",
-    sterileText: "Danışmadan bakım sürecine kadar temiz ve güvenli stüdyo düzeni.",
-    artistsEyebrow: "Sanatçılar",
-    artistsTitle: "Sanatçılarımız",
-    galleryTitle: "Dövme Galerisi",
-    seeMoreGallery: "Daha fazla tasarım gör",
-    infoEyebrow: "Bilgi",
-    infoTitle: "Ücretsiz danışma",
-    infoText: "Tasarım, boyut, bölge ve istediğin tarihi paylaş. Stüdyo doğru sanatçı ve randevu için yardımcı olur.",
-    locationTitle: "Konum",
-    hoursTitle: "Çalışma saatleri",
-    hoursText: "Pazartesi - Cumartesi 11:00 - 20:00",
-    phoneTitle: "Telefon",
-    mailTitle: "E-posta",
+    navPricing: "Fiyat",
+    navReservation: "Rezervasyon",
+    navGallery: "Galeri",
+    dmForBooking: "Randevu icin DM",
+    heroEyebrow: "Besiktas dovme ve piercing studyosu",
+    heroTitle: "Minimal cizgiler.<br />Temiz piercing.",
+    heroLead: "Fine-line dovmeler, el yazisi isler, kucuk ozel tasarimlar ve Besiktas Carsi'da profesyonel piercing.",
+    bookAppointment: "Randevu al",
+    viewWorks: "Isleri gor",
+    infoTitle: "Dovme ve piercing, sade ve temiz.",
+    infoText:
+      "Yapbi temiz yerlestirme, ince cizgi detaylari, minimal tasarimlar ve steril profesyonel piercing odakli calisir. Randevu icin referans, boyut, bolge ve tarihi paylas.",
+    fineLine: "Fine-line dovme",
+    fineLineText: "Kucuk semboller, bas harfler, tarihler, kisa yazilar ve minimal ozel parcalar.",
+    allStyles: "Tum stiller",
+    allStylesText: "Genel his minimal; talebe gore farkli dovme stilleri planlanabilir.",
+    piercing: "Piercing",
+    piercingText: "Kulak, burun, gobek ve diger piercing secenekleri, yeni taki alternatifleriyle.",
+    sterile: "Steril duzen",
+    sterileText: "Temiz ekipman, profesyonel surec ve cikmadan once bakim bilgisi.",
+    pricingEyebrow: "Fiyat",
+    pricingTitle: "Net baslangic bilgisi",
+    pricingText:
+      "Net fiyat tasarim detayi, boyut, bolge, taki secimi ve seans suresine gore belirlenir. En dogru teklif icin referans gorsel gonder.",
+    minimalTattoo: "Minimal dovme",
+    minimalTattooText: "Ince cizgi semboller, bas harf, tarih, kisa yazi ve kucuk ozel tasarimlar.",
+    quoteByDesign: "Tasarima gore",
+    piercingService: "Piercing hizmeti",
+    piercingServiceText: "Steril kurulum ve studyodaki taki secenekleriyle piercing randevusu.",
+    quoteByJewelry: "Takiya gore",
+    customPlanning: "Ozel planlama",
+    customPlanningText: "Randevu oncesi boyut, bolge, stil referansi ve uygun tarihi gonder.",
+    dmForPrice: "Fiyat icin DM",
     reservationEyebrow: "Rezervasyon",
-    reservationTitle: "Randevu al",
-    reservationText: "Sanatçı seç, fikrini bırak, stüdyo uygun saatler için dönüş yapsın.",
+    reservationTitle: "Yeni isini planla",
+    reservationText:
+      "Bu form demo website icin hazirlandi. Canli versiyonda Instagram DM, WhatsApp, e-posta veya randevu sistemine baglanabilir.",
+    nameLabel: "Isim",
+    phoneLabel: "Telefon",
+    serviceLabel: "Hizmet",
+    dateLabel: "Tercih edilen tarih",
+    messageLabel: "Fikir / bolge / boyut",
+    sendRequest: "Talebi hazirla",
+    galleryTitle: "Galeri",
+    galleryText: "Yapbi Instagram'indan son dovme ve piercing isleri.",
+    seeMore: "Daha fazla",
+    formReady: "talebin hazir. Final versiyonda bu buton Instagram DM veya WhatsApp'a gonderebilir.",
   },
 };
 
-const artistGrid = document.querySelector("[data-artist-grid]");
-const galleryGrid = document.querySelector("[data-gallery]");
-const artistPage = document.querySelector("[data-artist-page]");
 const menu = document.querySelector("[data-menu]");
-const artistSelect = document.querySelector("[data-artist-select]");
+const galleryGrid = document.querySelector("[data-gallery]");
 const formNote = document.querySelector("[data-form-note]");
 const langCurrent = document.querySelector("[data-lang-current]");
 let currentLang = "en";
 let visibleGalleryCount = 8;
 
-function instagramIconMarkup() {
-  return '<span class="instagram-icon" aria-hidden="true"></span>';
-}
-
 function initIcons() {
   if (window.lucide) {
     window.lucide.createIcons();
   }
-}
-
-function renderArtists() {
-  artistGrid.innerHTML = artists
-    .map(
-      (artist) => `
-        <a class="artist-card reveal-left" href="#artist-${artist.id}" aria-label="View ${artist.name}'s work">
-          <span class="artist-card__image">
-            <img src="${artist.image}" alt="${artist.name} tattoo work" loading="lazy" />
-          </span>
-          <h3>${artist.name}</h3>
-          <span class="artist-card__links">
-            <span class="artist-card__social" aria-label="Instagram">${instagramIconMarkup()}</span>
-            <i data-lucide="message-circle" aria-hidden="true"></i>
-          </span>
-        </a>
-      `,
-    )
-    .join("");
-
-  artists.forEach((artist) => {
-    const option = document.createElement("option");
-    option.value = artist.name;
-    option.textContent = artist.name;
-    artistSelect.append(option);
-  });
 }
 
 function renderGallery() {
@@ -202,16 +137,14 @@ function renderGallery() {
     .map(
       (src, index) => `
         <figure class="gallery-item">
-          <img src="${src}" alt="Grimm Tattoo gallery piece ${index + 1}" loading="lazy" />
+          <img src="${src}" alt="Yapbi tattoo and piercing gallery image ${index + 1}" loading="lazy" />
         </figure>
       `,
     )
     .join("");
 
   const button = document.querySelector("[data-see-more-gallery]");
-  if (button) {
-    button.hidden = visibleGalleryCount >= galleryImages.length;
-  }
+  button.hidden = visibleGalleryCount >= galleryImages.length;
 }
 
 function applyLanguage(lang) {
@@ -222,57 +155,10 @@ function applyLanguage(lang) {
     const key = element.dataset.i18n;
     element.textContent = translations[lang][key] || translations.en[key] || element.textContent;
   });
-}
-
-function renderArtistPage(artist) {
-  artistPage.hidden = false;
-  artistPage.innerHTML = `
-    <button class="back-link" type="button" data-back-artists>
-      <i data-lucide="arrow-left"></i>
-      Back to all artists
-    </button>
-    <div class="artist-detail">
-      <div class="reveal-left is-visible">
-        <p class="eyebrow">${artist.role}</p>
-        <h2>${artist.name}</h2>
-        <p>${artist.bio}</p>
-        <div class="artist-detail__actions">
-          <button class="primary-button" type="button" data-book-artist="${artist.name}">Book with ${artist.name}</button>
-          <a class="ghost-button" href="#gallery">View gallery</a>
-        </div>
-      </div>
-      <div class="artist-work-grid reveal-right is-visible">
-        ${artist.works.map((src) => `<img src="${src}" alt="${artist.name} tattoo work" loading="lazy" />`).join("")}
-      </div>
-    </div>
-  `;
-  initIcons();
-  artistPage.querySelector("[data-back-artists]").addEventListener("click", () => {
-    location.hash = "artists";
+  document.querySelectorAll("[data-i18n-html]").forEach((element) => {
+    const key = element.dataset.i18nHtml;
+    element.innerHTML = translations[lang][key] || translations.en[key] || element.innerHTML;
   });
-  artistPage.querySelector("[data-book-artist]").addEventListener("click", () => {
-    bookArtist(artist.name);
-  });
-  setTimeout(() => artistPage.scrollIntoView({ behavior: "smooth", block: "start" }), 40);
-}
-
-function handleRoute() {
-  const id = location.hash.replace("#artist-", "");
-  const artist = artists.find((item) => item.id === id);
-
-  if (artist) {
-    renderArtistPage(artist);
-    return;
-  }
-
-  artistPage.hidden = true;
-  artistPage.innerHTML = "";
-}
-
-function bookArtist(name) {
-  artistSelect.value = name || "Any artist";
-  closeMenu();
-  document.querySelector("#reservation").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function openMenu() {
@@ -289,9 +175,7 @@ function closeMenu() {
 
 function initMenu() {
   document.querySelector("[data-menu-open]").addEventListener("click", openMenu);
-  document.querySelectorAll("[data-menu-close]").forEach((button) => button.addEventListener("click", closeMenu));
-  document.querySelectorAll("[data-menu-link]").forEach((link) => link.addEventListener("click", closeMenu));
-  document.querySelector("[data-book-general]").addEventListener("click", () => bookArtist("Any artist"));
+  document.querySelectorAll("[data-menu-close], [data-menu-link]").forEach((item) => item.addEventListener("click", closeMenu));
   document.querySelector("[data-lang-toggle]").addEventListener("click", () => {
     applyLanguage(currentLang === "en" ? "tr" : "en");
   });
@@ -314,7 +198,7 @@ function initReveal() {
         }
       });
     },
-    { threshold: 0.18 },
+    { threshold: 0.16 },
   );
 
   document.querySelectorAll(".reveal-left, .reveal-right").forEach((element) => observer.observe(element));
@@ -325,11 +209,13 @@ function initRotators() {
     const images = [...frame.querySelectorAll("img")];
     let active = 0;
 
+    if (images.length < 2) return;
+
     setInterval(() => {
       images[active].classList.remove("active");
       active = (active + 1) % images.length;
       images[active].classList.add("active");
-    }, 3800 + frameIndex * 650);
+    }, 3900 + frameIndex * 500);
   });
 }
 
@@ -337,12 +223,11 @@ function initForm() {
   document.querySelector("[data-booking-form]").addEventListener("submit", (event) => {
     event.preventDefault();
     const form = event.currentTarget;
-    const firstName = new FormData(form).get("firstName") || "Your";
-    formNote.textContent = `${firstName}, your demo reservation is ready. In the final version this can send to WhatsApp, email, or a booking system.`;
+    const name = new FormData(form).get("name") || "Your";
+    formNote.textContent = `${name}, ${translations[currentLang].formReady}`;
   });
 }
 
-renderArtists();
 renderGallery();
 applyLanguage(currentLang);
 initIcons();
@@ -351,6 +236,3 @@ initGalleryActions();
 initReveal();
 initRotators();
 initForm();
-handleRoute();
-
-window.addEventListener("hashchange", handleRoute);
