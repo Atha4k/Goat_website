@@ -1,0 +1,947 @@
+:root {
+  color-scheme: dark;
+  --bg: #030303;
+  --panel: #0b0b0d;
+  --panel-soft: #121216;
+  --text: #fff8f8;
+  --muted: #a49c9c;
+  --line: rgba(255, 255, 255, 0.18);
+  --hot: #ff0b57;
+  --hot-soft: rgba(255, 11, 87, 0.16);
+  --white-soft: rgba(255, 255, 255, 0.92);
+  --max: 1180px;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 78% 8%, rgba(255, 11, 87, 0.14), transparent 28rem),
+    linear-gradient(180deg, #000 0%, var(--bg) 50%, #050505 100%);
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  min-height: 88px;
+  padding: 12px clamp(18px, 4vw, 48px);
+  border-bottom: 3px solid var(--white-soft);
+  background: rgba(0, 0, 0, 0.84);
+  backdrop-filter: blur(18px);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 34px);
+  justify-self: start;
+  width: max-content;
+  min-width: 0;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+}
+
+.brand-mark img {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+}
+
+.social-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.6vw, 20px);
+  min-width: 0;
+}
+
+.social-nav a,
+.icon-button,
+.lang-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  color: var(--hot);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  transition: color 180ms ease, border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.social-nav a:hover,
+.icon-button:hover,
+.lang-toggle:hover {
+  color: var(--text);
+  border-color: var(--hot);
+  background: var(--hot-soft);
+  transform: translateY(-2px);
+}
+
+.lang-toggle {
+  grid-auto-flow: column;
+  gap: 6px;
+  width: auto;
+  min-width: 64px;
+  padding: 0 10px;
+  color: var(--hot);
+  font-weight: 800;
+}
+
+.lang-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.instagram-icon {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid currentColor;
+  border-radius: 7px;
+}
+
+.instagram-icon::before,
+.instagram-icon::after {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+.instagram-icon::before {
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.instagram-icon::after {
+  top: 4px;
+  right: 4px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.wordmark {
+  position: absolute;
+  left: 50%;
+  justify-self: center;
+  transform: translateX(-50%);
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  line-height: 1;
+  color: var(--text);
+}
+
+.menu-button {
+  position: absolute;
+  top: 50%;
+  right: clamp(18px, 4vw, 48px);
+  justify-self: end;
+  transform: translateY(-50%);
+  color: var(--white-soft);
+}
+
+.menu-button:hover {
+  transform: translateY(calc(-50% - 2px));
+}
+
+.side-menu {
+  position: fixed;
+  inset: 0 0 0 auto;
+  z-index: 50;
+  width: min(430px, 88vw);
+  padding: 28px;
+  background: rgba(4, 4, 5, 0.96);
+  border-left: 1px solid var(--line);
+  box-shadow: -30px 0 80px rgba(0, 0, 0, 0.55);
+  transform: translateX(105%);
+  transition: transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.side-menu.open {
+  transform: translateX(0);
+}
+
+.menu-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0);
+  transition: background 240ms ease;
+}
+
+body.menu-open .menu-scrim {
+  pointer-events: auto;
+  background: rgba(0, 0, 0, 0.64);
+}
+
+.close-button {
+  margin-left: auto;
+}
+
+.side-menu__content {
+  display: grid;
+  min-height: calc(100vh - 96px);
+  align-content: start;
+  gap: 42px;
+}
+
+.side-menu__logo {
+  width: 230px;
+  margin-top: 10px;
+}
+
+.side-menu__links {
+  display: grid;
+  gap: 8px;
+}
+
+.side-menu__links a {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: 2.6rem;
+  line-height: 1;
+  transition: color 180ms ease, padding-left 180ms ease;
+}
+
+.side-menu__links a:hover {
+  color: var(--hot);
+  padding-left: 12px;
+}
+
+.side-menu__booking {
+  display: grid;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 32px;
+  color: var(--muted);
+}
+
+.section-pad {
+  width: min(var(--max), calc(100% - clamp(32px, 8vw, 96px)));
+  margin: 0 auto;
+  padding: clamp(46px, 7vw, 92px) 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.8fr);
+  align-items: center;
+  gap: clamp(34px, 8vw, 104px);
+  min-height: calc(100vh - 88px);
+}
+
+.eyebrow,
+.section-kicker {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  letter-spacing: 0;
+}
+
+.hero h1,
+.section-heading h2,
+.info-copy h2,
+.reservation__intro h2,
+.artist-page h2 {
+  margin: 0;
+  font-size: clamp(4.7rem, 11vw, 9.4rem);
+  line-height: 0.86;
+  letter-spacing: 0;
+  font-weight: 800;
+}
+
+.hero__details {
+  display: grid;
+  gap: 8px;
+  max-width: 430px;
+  margin-top: 28px;
+  color: var(--muted);
+}
+
+.hero__details a:nth-child(1),
+.hero__details a:nth-child(4) {
+  color: var(--hot);
+}
+
+.rotating-frame {
+  position: relative;
+  overflow: hidden;
+  min-height: 520px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #050505;
+}
+
+.rotating-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.65), transparent 28%, transparent 72%, rgba(0, 0, 0, 0.55)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0), #000 108%);
+  pointer-events: none;
+}
+
+.rotating-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.06);
+  filter: saturate(0.85) contrast(1.12);
+  transition: opacity 1200ms ease, transform 4600ms ease;
+}
+
+.rotating-frame img.logo-slide {
+  object-fit: contain;
+  padding: clamp(46px, 8vw, 90px);
+  background: #000;
+  filter: contrast(1.08);
+}
+
+.rotating-frame img.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.split-feature {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(320px, 1fr);
+  align-items: center;
+  gap: clamp(34px, 7vw, 84px);
+}
+
+.feature-image {
+  min-height: 505px;
+}
+
+.section-kicker {
+  max-width: 540px;
+  color: var(--text);
+  font-size: clamp(2.1rem, 4vw, 3.3rem);
+  line-height: 1.12;
+  text-transform: uppercase;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 42px 54px;
+  margin-top: 38px;
+}
+
+.experience-grid article,
+.info-list article {
+  display: grid;
+  gap: 14px;
+}
+
+.experience-grid svg,
+.info-list svg {
+  width: 34px;
+  height: 34px;
+  color: var(--hot);
+  stroke-width: 1.6;
+}
+
+.experience-grid h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.experience-grid p,
+.info-copy p,
+.reservation__intro p,
+.artist-page p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.artist-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(18px, 2vw, 26px);
+}
+
+.artist-card {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+  color: var(--text);
+}
+
+.artist-card__image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1.12;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--panel-soft);
+}
+
+.artist-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: saturate(0.86) brightness(0.88);
+  transition: transform 420ms ease, filter 420ms ease;
+}
+
+.artist-card:hover img {
+  transform: scale(1.06);
+  filter: saturate(1) brightness(1);
+}
+
+.artist-card h3 {
+  margin: 0;
+  color: var(--hot);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+}
+
+.artist-card__links {
+  display: flex;
+  gap: 12px;
+  color: var(--hot);
+}
+
+.artist-card__links svg,
+.artist-card__links .instagram-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.artist-card__social {
+  display: inline-flex;
+  color: var(--hot);
+}
+
+.gallery .section-heading {
+  margin-bottom: 34px;
+}
+
+.compact-heading {
+  margin-bottom: 34px;
+}
+
+.section-heading h2 {
+  font-size: clamp(3.7rem, 8vw, 7.4rem);
+  max-width: 820px;
+}
+
+.compact-heading h2 {
+  color: var(--text);
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: clamp(3.6rem, 7vw, 6.4rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 24px);
+}
+
+.gallery-item {
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #111;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.2) contrast(1.08);
+  transition: transform 520ms ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.artist-page {
+  border-block: 1px solid var(--line);
+}
+
+.artist-page[hidden] {
+  display: none;
+}
+
+.artist-detail {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(42px, 8vw, 96px);
+  align-items: start;
+}
+
+.artist-detail > div:first-child {
+  min-width: 0;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  color: var(--hot);
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.artist-detail h2 {
+  margin-bottom: 18px;
+  font-size: clamp(4.2rem, 7vw, 6.6rem);
+  line-height: 0.88;
+  color: var(--text);
+}
+
+.artist-detail p {
+  max-width: 520px;
+  font-size: clamp(1rem, 1.35vw, 1.18rem);
+}
+
+.artist-detail__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.artist-work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.artist-work-grid img {
+  width: 100%;
+  aspect-ratio: 0.78 / 1;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.information,
+.reservation {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(360px, 1.28fr);
+  gap: clamp(30px, 6vw, 72px);
+  align-items: center;
+}
+
+.reservation {
+  grid-template-columns: minmax(300px, 0.64fr) minmax(420px, 1.36fr);
+  gap: clamp(92px, 12vw, 160px);
+}
+
+.reservation__intro {
+  max-width: 520px;
+  margin-left: clamp(-44px, -2.5vw, -24px);
+}
+
+.info-copy h2,
+.reservation__intro h2 {
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  line-height: 0.95;
+}
+
+.reservation__intro h2 {
+  max-width: 500px;
+  font-size: clamp(3.4rem, 4.35vw, 4.35rem);
+}
+
+.info-copy p,
+.reservation__intro p {
+  max-width: 480px;
+  margin-top: 22px;
+}
+
+.info-list {
+  display: grid;
+  gap: 16px;
+}
+
+.info-card {
+  color: var(--text);
+}
+
+.info-list .info-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 18px;
+  min-height: 112px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.035);
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.info-list a.info-card:hover {
+  border-color: var(--hot);
+  background: var(--hot-soft);
+  transform: translateY(-2px);
+}
+
+.info-card strong,
+.info-card small {
+  display: block;
+}
+
+.info-card strong {
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+}
+
+.info-card small {
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.45;
+}
+
+.booking-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.booking-form label {
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.wide {
+  grid-column: 1 / -1;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.055);
+  outline: 0;
+}
+
+.booking-form input,
+.booking-form select {
+  height: 50px;
+  padding: 0 14px;
+}
+
+.booking-form textarea {
+  resize: vertical;
+  min-height: 132px;
+  padding: 14px;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  border-color: var(--hot);
+  box-shadow: 0 0 0 4px var(--hot-soft);
+}
+
+.primary-button,
+.ghost-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.primary-button {
+  color: white;
+  border: 1px solid var(--hot);
+  background: var(--hot);
+}
+
+.ghost-button {
+  color: var(--text);
+  border: 1px solid var(--line);
+  background: transparent;
+}
+
+.primary-button:hover,
+.ghost-button:hover {
+  transform: translateY(-2px);
+}
+
+.ghost-button:hover {
+  border-color: var(--hot);
+  background: var(--hot-soft);
+}
+
+.form-note {
+  min-height: 24px;
+  margin: 0;
+  color: var(--hot);
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 34px;
+  padding: 34px clamp(18px, 4vw, 48px);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-align: center;
+}
+
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transition: opacity 760ms ease, transform 760ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-left {
+  transform: translateX(-56px);
+}
+
+.reveal-right {
+  transform: translateX(56px);
+}
+
+.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reservation__intro.reveal-left,
+.reservation__intro.reveal-left.is-visible {
+  transform: none;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    grid-template-columns: auto 1fr auto;
+    min-height: 76px;
+    gap: 12px;
+  }
+
+  .brand-mark {
+    width: 48px;
+    height: 48px;
+  }
+
+  .social-nav {
+    gap: 4px;
+  }
+
+  .social-nav a,
+  .icon-button,
+  .lang-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .lang-toggle {
+    min-width: 50px;
+    padding: 0 6px;
+    font-size: 0.82rem;
+  }
+
+  .social-nav a[href="#reservation"] {
+    display: none;
+  }
+
+  .wordmark {
+    justify-self: center;
+    font-size: clamp(1.45rem, 6vw, 1.9rem);
+  }
+
+  .hero,
+  .split-feature,
+  .information,
+  .reservation,
+  .artist-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .reservation {
+    gap: 34px;
+  }
+
+  .reservation__intro {
+    margin-left: 0;
+    transform: none;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 58px;
+  }
+
+  .rotating-frame,
+  .feature-image {
+    min-height: 430px;
+  }
+
+  .artist-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-item,
+  .gallery-item:nth-child(1),
+  .gallery-item:nth-child(6),
+  .gallery-item:nth-child(2),
+  .gallery-item:nth-child(3),
+  .gallery-item:nth-child(4),
+  .gallery-item:nth-child(5) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 620px) {
+  .section-pad {
+    width: min(var(--max), calc(100% - 32px));
+  }
+
+  .hero h1 {
+    font-size: clamp(4rem, 22vw, 6rem);
+  }
+
+  .site-header {
+    padding: 10px 14px;
+  }
+
+  .menu-button {
+    right: 14px;
+  }
+
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header-left {
+    gap: 6px;
+  }
+
+  .social-nav a,
+  .icon-button,
+  .lang-toggle {
+    width: 28px;
+    height: 28px;
+  }
+
+  .social-nav {
+    gap: 2px;
+  }
+
+  .wordmark {
+    max-width: 104px;
+    font-size: 1.35rem;
+    text-align: center;
+  }
+
+  .lang-toggle {
+    min-width: 34px;
+    font-size: 0.76rem;
+  }
+
+  .lang-toggle svg {
+    display: none;
+  }
+
+  .rotating-frame,
+  .feature-image {
+    min-height: 360px;
+  }
+
+  .experience-grid,
+  .artist-grid,
+  .booking-form,
+  .artist-work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .side-menu__links a {
+    font-size: 2.2rem;
+  }
+}

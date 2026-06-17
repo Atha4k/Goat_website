@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grimm Tattoo Istanbul Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <div class="header-left">
+        <a class="brand-mark" href="#home" aria-label="Grimm Tattoo home">
+          <img
+            src="https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/grimm-logo-150x150.webp"
+            alt="Grimm Tattoo logo"
+          />
+        </a>
+
+        <nav class="social-nav" aria-label="Social links">
+          <a href="https://www.instagram.com/grimmistanbul/" aria-label="Instagram" target="_blank" rel="noreferrer">
+            <span class="instagram-icon" aria-hidden="true"></span>
+          </a>
+          <a href="https://wa.me/902122936142" aria-label="WhatsApp" target="_blank" rel="noreferrer">
+            <i data-lucide="message-circle"></i>
+          </a>
+          <button class="lang-toggle" type="button" data-lang-toggle aria-label="Change language">
+            <span data-lang-current>EN</span>
+            <i data-lucide="languages"></i>
+          </button>
+          <a href="#reservation" aria-label="Reservation">
+            <i data-lucide="calendar-days"></i>
+          </a>
+        </nav>
+      </div>
+
+      <a class="wordmark" href="#home">Grimm Tattoo</a>
+
+      <button class="icon-button menu-button" type="button" aria-label="Open menu" data-menu-open>
+        <i data-lucide="menu"></i>
+      </button>
+    </header>
+
+    <aside class="side-menu" data-menu aria-hidden="true">
+      <button class="icon-button close-button" type="button" aria-label="Close menu" data-menu-close>
+        <i data-lucide="x"></i>
+      </button>
+      <div class="side-menu__content">
+        <img
+          class="side-menu__logo"
+          src="https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/Grimm-Tattoo-4-1.webp"
+          alt="Grimm Tattoo"
+        />
+        <nav class="side-menu__links" aria-label="Main menu">
+          <a href="#home" data-menu-link data-i18n="navHome">Home</a>
+          <a href="#reservation" data-menu-link data-i18n="navReservation">Reservation</a>
+          <a href="#artists" data-menu-link data-i18n="navArtists">Artists</a>
+          <a href="#information" data-menu-link data-i18n="navInformation">Information</a>
+        </nav>
+        <div class="side-menu__booking">
+          <span data-i18n="menuReady">Ready for the next piece?</span>
+          <button class="primary-button" type="button" data-book-general data-i18n="bookConsultation">Book a consultation</button>
+        </div>
+      </div>
+    </aside>
+    <div class="menu-scrim" data-menu-close></div>
+
+    <main id="home">
+      <section class="hero section-pad">
+        <div class="hero__copy reveal-left">
+          <p class="eyebrow" data-i18n="heroEyebrow">Tattoo studio based in Beyoglu</p>
+          <h1>GRIMM<br />TATTOO</h1>
+          <div class="hero__details">
+            <a href="https://maps.google.com/?q=Asmalı+Mescit,+Nergis+Sk.+No:2,+34420+Beyoğlu/İstanbul" target="_blank" rel="noreferrer">
+              Asmalı Mescit, Nergis Sk. No:2, 34420
+            </a>
+            <span>Beyoğlu/Istanbul</span>
+            <span>Monday - Saturday 11:00 - 20:00</span>
+            <a href="tel:+902122936142">+90 (212) 293 61 42</a>
+            <a href="mailto:grimmistanbul@gmail.com">grimmistanbul@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal-right rotating-frame" data-rotator="hero">
+          <img class="active logo-slide" src="assets/grimm-intro-logo.png" alt="Grimm Tattoo hand skull logo" />
+          <img src="https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/unnamed-1-scaled.webp" alt="Large back tattoo" />
+          <img src="https://www.grimmtattooistanbul.com/wp-content/uploads/2025/08/9bf7d0d0-e858-4b70-aba0-5774276ad3ca.jpg" alt="Wolf tattoo close up" />
+          <img src="https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/image10.jpeg" alt="Tattoo detail" />
+        </div>
+      </section>
+
+      <section class="split-feature section-pad">
+        <div class="feature-image reveal-left rotating-frame" data-rotator="feature">
+          <img class="active" src="https://www.grimmtattooistanbul.com/wp-content/uploads/2025/08/8547956c-67ca-4c6c-afa0-dd8e07f2570e.jpg" alt="Tattoo detail" />
+          <img src="https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/image5-2.jpeg" alt="Tattoo detail" />
+          <img src="https://www.grimmtattooistanbul.com/wp-content/uploads/2025/02/IMG_0805-scaled.webp" alt="Realism tattoo" />
+        </div>
+
+        <div class="experience reveal-right">
+          <p class="section-kicker" data-i18n="experienceTitle">The best tattoo experience</p>
+          <div class="experience-grid">
+            <article>
+              <i data-lucide="pen-tool"></i>
+              <h3 data-i18n="bestProducts">Best Products</h3>
+              <p data-i18n="bestProductsText">Top-quality inks and equipment for vibrant, long-lasting tattoos.</p>
+            </article>
+            <article>
+              <i data-lucide="gem"></i>
+              <h3 data-i18n="customDesign">Custom Design</h3>
+              <p data-i18n="customDesignText">Artists build personal designs around your body, story, and style.</p>
+            </article>
+            <article>
+              <i data-lucide="badge-check"></i>
+              <h3 data-i18n="professionalArtists">Professional Artists</h3>
+              <p data-i18n="professionalArtistsText">Experienced hands, careful placement, and strong visual direction.</p>
+            </article>
+            <article>
+              <i data-lucide="shield-check"></i>
+              <h3 data-i18n="sterile">Sterile Environment</h3>
+              <p data-i18n="sterileText">A clean studio process from consultation to aftercare.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="artists section-pad" id="artists">
+        <div class="section-heading compact-heading reveal-left">
+          <p class="eyebrow" data-i18n="artistsEyebrow">Artists</p>
+          <h2 data-i18n="artistsTitle">Our Artists</h2>
+        </div>
+        <div class="artist-grid" data-artist-grid></div>
+      </section>
+
+      <section class="gallery section-pad" id="gallery">
+        <div class="section-heading compact-heading reveal-left">
+          <p class="eyebrow">Instagram</p>
+          <h2 data-i18n="galleryTitle">Tattoo Gallery</h2>
+        </div>
+        <div class="gallery-grid reveal-right" data-gallery></div>
+        <div class="gallery-actions reveal-left">
+          <button class="ghost-button" type="button" data-see-more-gallery data-i18n="seeMoreGallery">See more designs</button>
+        </div>
+      </section>
+
+      <section class="artist-page section-pad" id="artist-page" data-artist-page hidden></section>
+
+      <section class="information section-pad" id="information">
+        <div class="info-copy reveal-left">
+          <p class="eyebrow" data-i18n="infoEyebrow">Information</p>
+          <h2 data-i18n="infoTitle">Free consultation</h2>
+          <p data-i18n="infoText">
+            Share the design, size, placement, and preferred date. The studio can help plan the right artist and appointment.
+          </p>
+        </div>
+        <div class="info-list reveal-right">
+          <a class="info-card" href="https://maps.google.com/?q=Asmalı+Mescit,+Nergis+Sk.+No:2,+34420+Beyoğlu/İstanbul" target="_blank" rel="noreferrer">
+            <i data-lucide="map-pin"></i>
+            <span>
+              <strong data-i18n="locationTitle">Location</strong>
+              <small>Asmalı Mescit, Nergis Sk. No:2, 34420 Beyoğlu/Istanbul</small>
+            </span>
+          </a>
+          <article class="info-card">
+            <i data-lucide="clock-3"></i>
+            <span>
+              <strong data-i18n="hoursTitle">Working hours</strong>
+              <small data-i18n="hoursText">Monday - Saturday 11:00 - 20:00</small>
+            </span>
+          </article>
+          <a class="info-card" href="tel:+902122936142">
+            <i data-lucide="phone"></i>
+            <span>
+              <strong data-i18n="phoneTitle">Phone</strong>
+              <small>+90 (212) 293 61 42</small>
+            </span>
+          </a>
+          <a class="info-card" href="mailto:grimmistanbul@gmail.com">
+            <i data-lucide="mail"></i>
+            <span>
+              <strong data-i18n="mailTitle">Email</strong>
+              <small>grimmistanbul@gmail.com</small>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <section class="reservation section-pad" id="reservation">
+        <div class="reservation__intro reveal-left">
+          <p class="eyebrow" data-i18n="reservationEyebrow">Reservation</p>
+          <h2 data-i18n="reservationTitle">Book an appointment</h2>
+          <p data-i18n="reservationText">Choose an artist, leave the project idea, and the studio can follow up with available times.</p>
+        </div>
+        <form class="booking-form reveal-right" data-booking-form>
+          <label>
+            <span>First name</span>
+            <input name="firstName" type="text" autocomplete="given-name" required />
+          </label>
+          <label>
+            <span>Last name</span>
+            <input name="lastName" type="text" autocomplete="family-name" />
+          </label>
+          <label>
+            <span>Phone</span>
+            <input name="phone" type="tel" autocomplete="tel" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input name="email" type="email" autocomplete="email" />
+          </label>
+          <label>
+            <span>Artist</span>
+            <select name="artist" data-artist-select>
+              <option>Any artist</option>
+            </select>
+          </label>
+          <label class="wide">
+            <span>Message</span>
+            <textarea name="message" rows="5" placeholder="Style, size, placement, preferred date..."></textarea>
+          </label>
+          <button class="primary-button wide" type="submit">Book an appointment</button>
+          <p class="form-note" data-form-note aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Asmalı Mescit, Nergis Sk. No:2, 34420 Beyoğlu/Istanbul</span>
+      <span>Booking hours: Monday - Saturday 11:00 - 20:00</span>
+      <span>Call us: +90 (212) 293 61 42</span>
+      <span>Mail us: grimmistanbul@gmail.com</span>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
