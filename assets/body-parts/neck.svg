@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 680" role="img" aria-label="Neck placement placeholder">
+  <defs>
+    <linearGradient id="skin" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f0c9b0"/>
+      <stop offset=".55" stop-color="#d29b80"/>
+      <stop offset="1" stop-color="#986550"/>
+    </linearGradient>
+    <radialGradient id="light" cx="48%" cy="18%" r="68%">
+      <stop offset="0" stop-color="#fffaf2" stop-opacity=".52"/>
+      <stop offset="1" stop-color="#111111" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="520" height="680" fill="#171311"/>
+  <path d="M190 70c42-34 98-34 140 0 34 28 42 75 22 116-12 25-21 58-19 100 4 78 54 120 94 159 25 25 14 74-23 93-75 39-213 39-288 0-37-19-48-68-23-93 40-39 90-81 94-159 2-42-7-75-19-100-20-41-12-88 22-116z" fill="url(#skin)"/>
+  <path d="M210 254c24 30 76 30 100 0M260 210v288" fill="none" stroke="#fffaf2" stroke-opacity=".16" stroke-width="4"/>
+  <rect width="520" height="680" fill="url(#light)"/>
+</svg>

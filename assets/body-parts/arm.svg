@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 680" role="img" aria-label="Anatomical full arm placement placeholder">
+  <defs>
+    <linearGradient id="skin" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f3c8ad"/>
+      <stop offset=".42" stop-color="#dc9872"/>
+      <stop offset=".72" stop-color="#bd7053"/>
+      <stop offset="1" stop-color="#824937"/>
+    </linearGradient>
+    <radialGradient id="light" cx="36%" cy="12%" r="78%">
+      <stop offset="0" stop-color="#fff4dc" stop-opacity=".6"/>
+      <stop offset=".48" stop-color="#fff4dc" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#090706" stop-opacity=".18"/>
+    </radialGradient>
+    <linearGradient id="edgeShade" x1="0" x2="1">
+      <stop offset="0" stop-color="#3a1d16" stop-opacity=".18"/>
+      <stop offset=".38" stop-color="#3a1d16" stop-opacity="0"/>
+      <stop offset=".68" stop-color="#3a1d16" stop-opacity=".02"/>
+      <stop offset="1" stop-color="#3a1d16" stop-opacity=".28"/>
+    </linearGradient>
+  </defs>
+  <rect width="520" height="680" fill="#151210"/>
+
+  <path d="M260 31c54 5 94 43 104 101 7 42-6 79-40 113-3 36 2 74 14 114 15 52 10 107-15 164-11 25-16 49-14 73 16 10 24 23 22 38-2 17-15 24-31 15l-8-6-6 25c-4 16-22 16-27 1l-8-31-5 31c-3 16-22 15-25-1l-6-34-10 26c-6 15-24 11-24-5 1-17 8-38 17-58-13-25-14-58-2-99 16-54 24-101 23-141-1-36-12-69-34-101-26-38-36-79-30-124 8-61 50-106 105-101z" fill="url(#skin)"/>
+
+  <path d="M257 38c-38 29-58 67-60 114-2 37 11 70 39 101-17 45-19 91-6 138-13 51-16 99-8 145 4 24 12 45 25 62" fill="none" stroke="#2d120e" stroke-opacity=".3" stroke-width="6" stroke-linecap="round"/>
+  <path d="M315 72c28 34 35 72 21 115-8 25-25 47-50 66M225 253c32 24 70 27 112 8" fill="none" stroke="#fff4dc" stroke-opacity=".2" stroke-width="8" stroke-linecap="round"/>
+
+  <path d="M235 87c32 33 72 42 117 26" fill="none" stroke="#3a1d16" stroke-opacity=".22" stroke-width="6" stroke-linecap="round"/>
+  <path d="M222 149c24 30 57 39 97 27M218 217c31 23 67 22 106-3" fill="none" stroke="#fff4dc" stroke-opacity=".15" stroke-width="7" stroke-linecap="round"/>
+  <path d="M219 313c31 17 67 13 106-11M214 393c37 19 76 16 119-9" fill="none" stroke="#6f382a" stroke-opacity=".24" stroke-width="6" stroke-linecap="round"/>
+
+  <path d="M233 334c-9 54-7 104 7 151M322 321c7 57-4 108-32 157" fill="none" stroke="#fff4dc" stroke-opacity=".16" stroke-width="6" stroke-linecap="round"/>
+  <path d="M224 505c26 16 56 16 91 0M220 570c25 13 53 10 85-9" fill="none" stroke="#2d120e" stroke-opacity=".2" stroke-width="5" stroke-linecap="round"/>
+
+  <path d="M205 600c-13 21-18 40-15 58M229 607c-7 20-8 39-4 58M251 606c1 21 4 40 9 60M282 603c9 17 18 31 28 42" fill="none" stroke="#fff4dc" stroke-opacity=".22" stroke-width="5" stroke-linecap="round"/>
+  <path d="M205 596c32 12 67 10 105-6M221 575c25 12 53 10 85-7" fill="none" stroke="#2d120e" stroke-opacity=".24" stroke-width="5" stroke-linecap="round"/>
+
+  <ellipse cx="299" cy="121" rx="55" ry="72" fill="#a85640" opacity=".14" transform="rotate(10 299 121)"/>
+  <ellipse cx="292" cy="406" rx="38" ry="108" fill="#7d3d31" opacity=".13" transform="rotate(3 292 406)"/>
+  <ellipse cx="255" cy="667" rx="76" ry="16" fill="#0b0908" opacity=".25"/>
+
+  <rect width="520" height="680" fill="url(#edgeShade)"/>
+  <rect width="520" height="680" fill="url(#light)"/>
+</svg>

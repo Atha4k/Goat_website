@@ -3,248 +3,280 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yapbi Tattoo & Piercing</title>
+    <meta
+      name="description"
+      content="Portfolio and booking page for GOAT Art Society tattoo studio."
+    />
+    <title>GOAT Art Society | Tattoo Studio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260630-0148" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
   </head>
   <body>
     <header class="site-header">
-      <div class="header-left">
-        <a class="brand-mark" href="#home" aria-label="Yapbi home">
-          <img src="assets/yapbi/logo.jpg" alt="Yapbi Tattoo & Piercing logo" />
-        </a>
-        <nav class="social-nav" aria-label="Social links">
-          <a
-            class="instagram-link"
-            href="https://www.instagram.com/yapbi_tattoo_piercing/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Instagram"
-          >
-            <span class="instagram-icon" aria-hidden="true"></span>
-          </a>
-          <a
-            class="whatsapp-link"
-            href="https://wa.me/905519494944"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="WhatsApp"
-          >
-            <i data-lucide="message-circle"></i>
-          </a>
-        </nav>
-      </div>
+      <a class="brand" href="#top" aria-label="GOAT Art Society home">
+        <span class="goat-logo goat-logo--header" aria-hidden="true">
+          <span class="goat-logo__main">GOAT</span>
+          <span class="goat-logo__rule"></span>
+          <span class="goat-logo__sub">art society</span>
+        </span>
+      </a>
 
-      <a class="wordmark" href="#home">YAPBITATTOO & PIERCING</a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#work" data-i18n="navWork">Work</a>
+        <a href="#approach" data-i18n="navApproach">Approach</a>
+        <a href="#booking" data-i18n="navBooking">Booking</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
 
       <div class="header-actions">
-        <button class="icon-button lang-toggle" type="button" data-lang-toggle aria-label="Change language">
+        <button class="language-toggle" type="button" data-language-toggle aria-label="Change language">
           <span data-lang-current>EN</span>
-          <i data-lucide="languages"></i>
+          <small>TR</small>
         </button>
-        <button class="icon-button menu-button" type="button" aria-label="Open menu" data-menu-open>
-          <i data-lucide="menu"></i>
+        <a
+          class="icon-link"
+          href="https://www.instagram.com/goatartsociety/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Open Instagram"
+        >
+          <span class="instagram-glyph" aria-hidden="true"></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" data-menu-toggle>
+          <span></span>
+          <span></span>
         </button>
       </div>
     </header>
 
-    <aside class="side-menu" data-menu aria-hidden="true">
-      <button class="icon-button close-button" type="button" aria-label="Close menu" data-menu-close>
-        <i data-lucide="x"></i>
-      </button>
-      <img class="side-menu__logo" src="assets/yapbi/logo.jpg" alt="Yapbi Tattoo & Piercing" />
-      <nav class="side-menu__links" aria-label="Main menu">
-        <a href="#home" data-menu-link data-i18n="navHome">Home</a>
-        <a href="#information" data-menu-link data-i18n="navInformation">Information</a>
-        <a href="#pricing" data-menu-link data-i18n="navPricing">Pricing</a>
-        <a href="#reservation" data-menu-link data-i18n="navReservation">Reservation</a>
-        <a href="#gallery" data-menu-link data-i18n="navGallery">Gallery</a>
-      </nav>
-      <a
-        class="primary-button"
-        href="https://www.instagram.com/yapbi_tattoo_piercing/"
-        target="_blank"
-        rel="noreferrer"
-        data-i18n="dmForBooking"
-      >
-        DM for booking
-      </a>
-    </aside>
-    <button class="menu-scrim" type="button" aria-label="Close navigation overlay" data-menu-close></button>
+    <nav class="mobile-menu" aria-label="Mobile navigation" data-mobile-menu>
+      <a href="#work" data-i18n="navWork">Work</a>
+      <a href="#approach" data-i18n="navApproach">Approach</a>
+      <a href="#booking" data-i18n="navBooking">Booking</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
+    </nav>
 
-    <main id="home">
-      <section class="hero section-pad">
-        <div class="hero__copy reveal-left">
-          <p class="eyebrow" data-i18n="heroEyebrow">Besiktas tattoo and piercing studio</p>
-          <h1 data-i18n-html="heroTitle">Minimal lines.<br />Clean piercing.</h1>
-          <p class="hero__lead" data-i18n="heroLead">
-            Fine-line tattoos, handwritten pieces, small custom designs, and professional piercing in Besiktas Carsi.
+    <main id="top">
+      <section class="hero">
+        <img class="hero__image" src="assets/yigit/goat-studio-hero.png" alt="Bright clean tattoo studio interior" />
+        <div class="hero__shade"></div>
+        <div class="hero__red-shine" aria-hidden="true"></div>
+        <div
+          class="machine-viewer"
+          data-machine-viewer
+          data-model-src="public/models/tattoo-machine.glb"
+          aria-label="Interactive 3D tattoo machine"
+        ></div>
+        <div class="hero__content">
+          <div class="logo-slot" aria-label="GOAT Art Society logo">
+            <span class="goat-logo goat-logo--hero" aria-hidden="true">
+              <span class="goat-logo__main">GOAT</span>
+              <span class="goat-logo__rule"></span>
+              <span class="goat-logo__sub">art society</span>
+            </span>
+          </div>
+          <h1 data-i18n="heroTitle">GOAT Art Society</h1>
+          <p data-i18n="heroLead">
+            A clean tattoo studio experience shaped around strong work, calm lighting, and direct booking.
           </p>
           <div class="hero__actions">
-            <a class="primary-button" href="#reservation" data-i18n="bookAppointment">Book appointment</a>
-            <a class="ghost-button" href="#gallery" data-i18n="viewWorks">View works</a>
-          </div>
-          <div class="location-strip">
-            <i data-lucide="map-pin"></i>
-            <a href="https://g.page/r/CcAxWVAVTXXYEBA" target="_blank" rel="noreferrer">
-              <strong>Besiktas Carsi</strong>
-              <span>Sinanpasa Is Merkezi, Floor 2</span>
+            <a class="button button--light" href="#booking" data-i18n="startBooking">Start a booking</a>
+            <a
+              class="button button--ghost"
+              href="https://www.instagram.com/goatartsociety/"
+              target="_blank"
+              rel="noreferrer"
+              data-i18n="viewInstagram"
+            >
+              View Instagram
             </a>
           </div>
         </div>
+      </section>
 
-        <div class="hero__visual reveal-right rotating-frame" data-rotator>
-          <img class="active" src="assets/yapbi/work-03.jpg" alt="Minimal handwritten tattoo" />
-          <img src="assets/yapbi/work-07.jpg" alt="Minimal hand tattoo" />
-          <img src="assets/yapbi/work-02.jpg" alt="Dragon tattoo" />
-          <img src="assets/yapbi/work-06.jpg" alt="Belly piercing" />
+      <section class="works-preview" id="work">
+        <div class="works-preview__backdrop" aria-hidden="true">
+          <div class="work-bg work-bg--one"></div>
+          <div class="work-bg work-bg--two"></div>
+          <div class="work-bg work-bg--three"></div>
+        </div>
+        <div class="works-preview__content">
+          <div>
+            <p class="eyebrow" data-i18n="workEyebrow">Studio work</p>
+            <h2 data-i18n="workTitle">Selected tattoos</h2>
+            <p data-i18n="workText">
+              A rotating preview of selected tattoo work from the studio. Replace these frames as the final GOAT archive grows.
+            </p>
+            <a class="button button--light" href="works.html" data-i18n="allWorks">See all works</a>
+          </div>
+          <div class="work-frame" aria-label="Rotating work preview">
+            <div class="work-slide is-active work-slide--one">
+              <img src="assets/yigit/works/work-01.jpg" alt="Tattoo work by GOAT Art Society" />
+              <span data-i18n="cardOne">Cover-up flow</span>
+            </div>
+            <div class="work-slide work-slide--two">
+              <img src="assets/yigit/works/work-05.jpg" alt="Red and black tattoo work by GOAT Art Society" />
+              <span data-i18n="cardTwo">Red contrast</span>
+            </div>
+            <div class="work-slide work-slide--three">
+              <img src="assets/yigit/works/work-12.jpg" alt="Floral tattoo work by GOAT Art Society" />
+              <span data-i18n="cardThree">Floral blackwork</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="quick-info">
-        <a href="https://g.page/r/CcAxWVAVTXXYEBA" target="_blank" rel="noreferrer">
-          <i data-lucide="map"></i>
-          <span>Besiktas / Istanbul</span>
-        </a>
-        <a href="https://www.instagram.com/yapbi_tattoo_piercing/" target="_blank" rel="noreferrer">
-          <span class="instagram-icon small-icon" aria-hidden="true"></span>
-          <span>@yapbi_tattoo_piercing</span>
-        </a>
-        <a href="https://wa.me/905519494944" target="_blank" rel="noreferrer">
-          <i data-lucide="message-circle"></i>
-          <span>+90 551 949 49 44</span>
-        </a>
-      </section>
-
-      <section class="split-feature section-pad" id="information">
-        <div class="feature-image rotating-frame reveal-left" data-rotator>
-          <img class="active" src="assets/yapbi/work-08.jpg" alt="Handwritten tattoo detail" />
-          <img src="assets/yapbi/work-10.jpg" alt="Minimal quote tattoo" />
-          <img src="assets/yapbi/work-11.jpg" alt="Fine line tattoo detail" />
+      <section class="section approach" id="approach">
+        <div class="ambient-objects" aria-hidden="true">
+          <div class="ambient-model ambient-model--artist" data-ambient-model data-model-src="assets/objects/mjm-sprue-_tattoo_artist.glb"></div>
+          <div class="ambient-model ambient-model--inkwell" data-ambient-model data-model-src="assets/objects/inkwell.glb"></div>
+          <div class="ambient-model ambient-model--mask" data-ambient-model data-model-src="assets/objects/samurai_oni_mask.glb"></div>
         </div>
-        <div class="experience reveal-right">
-          <p class="section-kicker" data-i18n="infoTitle">Tattoo and piercing, kept simple.</p>
-          <p class="section-copy" data-i18n="infoText">
-            Yapbi focuses on clean placement, fine line details, minimal designs, and sterile professional piercing. Share your reference, size, placement, and date to plan the appointment.
-          </p>
-          <div class="service-grid">
-            <article>
-              <i data-lucide="pen-line"></i>
-              <h3 data-i18n="fineLine">Fine-line tattoo</h3>
-              <p data-i18n="fineLineText">Small symbols, handwritten text, delicate placement, and custom minimal pieces.</p>
+        <div class="approach__media">
+          <div class="paper-note">
+            <span class="paper-note__rule"></span>
+            <p class="paper-note__item paper-note__item--left" data-note-item data-enter-side="left" data-i18n="noteReference">reference</p>
+            <p class="paper-note__item paper-note__item--right" data-note-item data-enter-side="right" data-i18n="notePlacement">placement</p>
+            <p class="paper-note__item paper-note__item--left" data-note-item data-enter-side="left" data-i18n="noteSize">size</p>
+            <p class="paper-note__item paper-note__item--right" data-note-item data-enter-side="right" data-i18n="noteDate">date</p>
+          </div>
+        </div>
+        <div class="approach__copy">
+          <p class="eyebrow" data-i18n="approachEyebrow">How it works</p>
+          <h2 data-i18n="approachTitle">Send the idea. Shape the mark.</h2>
+          <div class="steps booking-flow" data-booking-flow>
+            <article class="flow-step flow-step--references">
+              <span>1</span>
+              <div class="flow-step__content">
+                <h3 data-i18n="stepOneTitle">Share references</h3>
+                <p data-i18n="stepOneText">Send images, mood, subject, size, and body placement through Instagram DM.</p>
+                <div class="idea-board">
+                  <div class="idea-paper" data-drop-zone>
+                    <canvas data-drawing-canvas aria-label="Draw tattoo idea"></canvas>
+                    <img data-upload-preview alt="Uploaded tattoo idea preview" hidden />
+                    <p data-empty-idea>Draw here, upload, or drop your design</p>
+                  </div>
+                  <div class="idea-actions">
+                    <label class="button button--light idea-upload">
+                      <input data-design-upload type="file" accept="image/png,image/jpeg,image/jpg,image/webp" />
+                      Upload design
+                    </label>
+                    <button class="button button--dark" type="button" data-clear-design>Clear paper</button>
+                  </div>
+                  <div class="body-selector" aria-label="Choose body placement">
+                    <button class="is-active" type="button" data-body-part="arm">Arm</button>
+                    <button type="button" data-body-part="leg">Leg</button>
+                    <button type="button" data-body-part="chest">Chest</button>
+                    <button type="button" data-body-part="back">Back</button>
+                    <button type="button" data-body-part="neck">Neck</button>
+                  </div>
+                </div>
+              </div>
             </article>
-            <article>
-              <i data-lucide="sparkles"></i>
-              <h3 data-i18n="allStyles">All styles</h3>
-              <p data-i18n="allStylesText">Minimal work is the main feel, with flexible tattoo styles by request.</p>
+            <article class="flow-step flow-step--preview">
+              <span>2</span>
+              <div class="flow-step__content">
+                <h3 data-i18n="stepTwoTitle">Confirm the design</h3>
+                <p data-i18n="stepTwoText">The piece is planned around flow, detail level, and how it will age on skin.</p>
+                <div class="placement-preview" data-placement-preview data-body-surface="arm">
+                  <img data-body-preview src="assets/body-parts/arm.svg" alt="Selected body part preview" />
+                  <img class="placement-preview__design" data-design-placement alt="Tattoo design placement preview" hidden />
+                  <div class="placement-preview__placeholder" data-placement-placeholder>Design preview appears here</div>
+                </div>
+                <div class="placement-controls">
+                  <button class="button button--dark" type="button" data-reset-placement>Reset tattoo</button>
+                  <label>
+                    <span>Size</span>
+                    <input data-placement-scale type="range" min="0.45" max="1.8" step="0.01" value="1" />
+                  </label>
+                </div>
+              </div>
             </article>
-            <article>
-              <i data-lucide="gem"></i>
-              <h3 data-i18n="piercing">Piercing</h3>
-              <p data-i18n="piercingText">Ear, nose, belly, and other piercing options with fresh jewelry choices.</p>
-            </article>
-            <article>
-              <i data-lucide="shield-check"></i>
-              <h3 data-i18n="sterile">Sterile setup</h3>
-              <p data-i18n="sterileText">Clean tools, professional process, and aftercare guidance before you leave.</p>
+            <article class="flow-step flow-step--artist">
+              <span>3</span>
+              <div class="flow-step__content">
+                <h3 data-i18n="stepThreeTitle">Book the session</h3>
+                <p data-i18n="stepThreeText">Once the date and quote are clear, the appointment details are locked in.</p>
+                <div class="artist-mini-grid" aria-label="Artist selection">
+                  <button class="artist-mini-card is-active" type="button" data-artist-option="Artist #1">Artist #1</button>
+                  <button class="artist-mini-card" type="button" data-artist-option="Artist #2">Artist #2</button>
+                  <button class="artist-mini-card" type="button" data-artist-option="Artist #3">Artist #3</button>
+                  <button class="artist-mini-card" type="button" data-artist-option="Artist #4">Artist #4</button>
+                </div>
+                <a class="button button--light flow-booking-link" href="#booking">Continue to booking</a>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="pricing section-pad" id="pricing">
-        <div class="section-heading reveal-left">
-          <p class="eyebrow" data-i18n="pricingEyebrow">Pricing</p>
-          <h2 data-i18n="pricingTitle">Clear starting points</h2>
-          <p data-i18n="pricingText">
-            Final pricing depends on design detail, size, placement, jewelry choice, and session time. Send a reference image for the cleanest quote.
+      <section class="section booking" id="booking">
+        <div class="ambient-objects ambient-objects--booking" aria-hidden="true">
+          <div class="ambient-model ambient-model--table" data-ambient-model data-model-src="assets/objects/wulop_massage_table.glb"></div>
+          <div class="ambient-model ambient-model--booking-ink" data-ambient-model data-model-src="assets/objects/inkwell.glb"></div>
+        </div>
+        <div class="booking__intro">
+          <p class="eyebrow" data-i18n="bookingEyebrow">Booking helper</p>
+          <h2 data-i18n="bookingTitle">Send a booking request.</h2>
+          <p data-i18n="bookingText">
+            Add your name, idea, and preferred artist. The selected body part and design preview stay connected to the request.
           </p>
         </div>
-        <div class="pricing-grid reveal-right">
-          <article>
-            <span>Tattoo</span>
-            <h3 data-i18n="minimalTattoo">Minimal tattoo</h3>
-            <p data-i18n="minimalTattooText">Fine-line symbols, initials, dates, short text, and small custom pieces.</p>
-            <strong data-i18n="quoteByDesign">Quote by design</strong>
-          </article>
-          <article>
-            <span>Piercing</span>
-            <h3 data-i18n="piercingService">Piercing service</h3>
-            <p data-i18n="piercingServiceText">Piercing appointment with sterile setup and jewelry options at the studio.</p>
-            <strong data-i18n="quoteByJewelry">Quote by jewelry</strong>
-          </article>
-          <article>
-            <span>Consultation</span>
-            <h3 data-i18n="customPlanning">Custom planning</h3>
-            <p data-i18n="customPlanningText">Send size, placement, style reference, and preferred date before booking.</p>
-            <strong data-i18n="dmForPrice">DM for price</strong>
-          </article>
-        </div>
-      </section>
 
-      <section class="reservation section-pad" id="reservation">
-        <div class="reservation__intro reveal-left">
-          <p class="eyebrow" data-i18n="reservationEyebrow">Reservation</p>
-          <h2 data-i18n="reservationTitle">Plan your next piece</h2>
-          <p data-i18n="reservationText">
-            Use the form for the demo website. In the live version this can send directly to Instagram DM, WhatsApp, email, or a booking system.
-          </p>
-        </div>
-        <form class="booking-form reveal-right" data-booking-form>
+        <form class="booking-form booking-form--request" data-booking-form>
           <label>
-            <span data-i18n="nameLabel">Name</span>
+            <span data-i18n="nameLabel">Customer name</span>
             <input name="name" type="text" autocomplete="name" required />
           </label>
           <label>
-            <span data-i18n="phoneLabel">Phone</span>
-            <input name="phone" type="tel" autocomplete="tel" required />
-          </label>
-          <label>
-            <span data-i18n="serviceLabel">Service</span>
-            <select name="service">
-              <option>Tattoo</option>
-              <option>Piercing</option>
-              <option>Tattoo + Piercing</option>
+            <span>Artist selection</span>
+            <select name="artist" data-booking-artist>
+              <option>Artist #1</option>
+              <option>Artist #2</option>
+              <option>Artist #3</option>
+              <option>Artist #4</option>
             </select>
           </label>
-          <label>
-            <span data-i18n="dateLabel">Preferred date</span>
-            <input name="date" type="date" />
-          </label>
           <label class="wide">
-            <span data-i18n="messageLabel">Idea / placement / size</span>
-            <textarea name="message" rows="5" placeholder="Example: small handwritten tattoo on inner arm..."></textarea>
+            <span data-i18n="ideaLabel">Tattoo idea / description</span>
+            <textarea name="idea" rows="5" placeholder="Describe the tattoo, references, size, and anything important." data-i18n-placeholder="ideaPlaceholder" required></textarea>
           </label>
-          <button class="primary-button wide" type="submit" data-i18n="sendRequest">Prepare request</button>
-          <p class="form-note" data-form-note aria-live="polite"></p>
+          <button class="button button--light" type="submit">Book</button>
+          <p class="booking-status" data-booking-status aria-live="polite"></p>
         </form>
       </section>
 
-      <section class="gallery section-pad" id="gallery">
-        <div class="section-heading reveal-left">
-          <p class="eyebrow">Instagram</p>
-          <h2 data-i18n="galleryTitle">Gallery</h2>
-          <p data-i18n="galleryText">Recent tattoo and piercing work from Yapbi's Instagram.</p>
+      <section class="contact" id="contact">
+        <div>
+          <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
+          <h2 data-i18n="contactTitle">Ready when the real work is.</h2>
         </div>
-        <div class="gallery-grid reveal-right" data-gallery></div>
-        <div class="gallery-actions reveal-left">
-          <button class="ghost-button" type="button" data-see-more-gallery data-i18n="seeMore">See more</button>
-        </div>
+        <a
+          class="button button--light"
+          href="https://www.instagram.com/goatartsociety/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span data-i18n="dmInstagram">DM on Instagram</span>
+        </a>
       </section>
     </main>
 
-    <footer class="footer">
-      <span>Yapbitattoo & Piercing</span>
-      <a href="https://g.page/r/CcAxWVAVTXXYEBA" target="_blank" rel="noreferrer">Besiktas Carsi, Sinanpasa Is Merkezi, Floor 2</a>
-      <a href="https://www.instagram.com/yapbi_tattoo_piercing/" target="_blank" rel="noreferrer">@yapbi_tattoo_piercing</a>
-    </footer>
-
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js?v=20260630-0148"></script>
+    <script type="module" src="model-viewer.js?v=20260630-0150"></script>
+    <script type="module" src="ambient-models.js?v=20260630-0148"></script>
   </body>
 </html>

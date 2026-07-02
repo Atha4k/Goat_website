@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 680" role="img" aria-label="Full human back placement placeholder">
+  <defs>
+    <linearGradient id="skin" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f3c8ad"/>
+      <stop offset=".42" stop-color="#dc9872"/>
+      <stop offset=".72" stop-color="#bd7053"/>
+      <stop offset="1" stop-color="#824937"/>
+    </linearGradient>
+    <radialGradient id="light" cx="36%" cy="12%" r="78%">
+      <stop offset="0" stop-color="#fff4dc" stop-opacity=".6"/>
+      <stop offset=".48" stop-color="#fff4dc" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#090706" stop-opacity=".18"/>
+    </radialGradient>
+    <linearGradient id="edgeShade" x1="0" x2="1">
+      <stop offset="0" stop-color="#3a1d16" stop-opacity=".22"/>
+      <stop offset=".34" stop-color="#3a1d16" stop-opacity="0"/>
+      <stop offset=".66" stop-color="#3a1d16" stop-opacity="0"/>
+      <stop offset="1" stop-color="#3a1d16" stop-opacity=".26"/>
+    </linearGradient>
+  </defs>
+  <rect width="520" height="680" fill="#151210"/>
+
+  <path d="M219 36c25-12 57-12 82 0l10 78c46 9 90 30 132 63 42 34 61 82 54 145-6 54-29 104-69 150-36 42-53 106-50 192H142c3-86-14-150-50-192-40-46-63-96-69-150-7-63 12-111 54-145 42-33 86-54 132-63z" fill="url(#skin)"/>
+
+  <path d="M216 103c-34 21-69 36-105 45M304 103c34 21 69 36 105 45" fill="none" stroke="#fff4dc" stroke-opacity=".2" stroke-width="9" stroke-linecap="round"/>
+  <path d="M211 72c31 18 67 18 98 0" fill="none" stroke="#2b120e" stroke-opacity=".22" stroke-width="5" stroke-linecap="round"/>
+  <path d="M260 101c0 118 0 238 0 360M260 500c-3 45-3 88 0 129" fill="none" stroke="#fff4dc" stroke-opacity=".25" stroke-width="6" stroke-linecap="round"/>
+
+  <path d="M184 157c-26 49-31 98-15 147M336 157c26 49 31 98 15 147" fill="none" stroke="#2d120e" stroke-opacity=".52" stroke-width="6" stroke-linecap="round"/>
+  <path d="M202 160c19 60 38 100 58 120 20-20 39-60 58-120" fill="none" stroke="#fff4dc" stroke-opacity=".18" stroke-width="8" stroke-linecap="round"/>
+  <path d="M160 216c24 84 58 141 100 171 42-30 76-87 100-171" fill="none" stroke="#6f382a" stroke-opacity=".24" stroke-width="6" stroke-linecap="round"/>
+
+  <path d="M123 248c-15 73-3 151 36 236M397 248c15 73 3 151-36 236" fill="none" stroke="#2b120e" stroke-opacity=".48" stroke-width="6" stroke-linecap="round"/>
+  <path d="M178 380c20 23 47 36 82 36 35 0 62-13 82-36" fill="none" stroke="#fff4dc" stroke-opacity=".15" stroke-width="7" stroke-linecap="round"/>
+  <path d="M191 472c43 28 95 28 138 0" fill="none" stroke="#3a1d16" stroke-opacity=".18" stroke-width="5" stroke-linecap="round"/>
+
+  <ellipse cx="137" cy="262" rx="36" ry="105" fill="#a85640" opacity=".18"/>
+  <ellipse cx="383" cy="262" rx="36" ry="105" fill="#7d3d31" opacity=".18"/>
+  <path d="M108 178c-32 26-49 61-51 105M412 178c32 26 49 61 51 105" fill="none" stroke="#fff4dc" stroke-opacity=".14" stroke-width="8" stroke-linecap="round"/>
+  <path d="M137 506c18 49 39 89 63 120M383 506c-18 49-39 89-63 120" fill="none" stroke="#2b120e" stroke-opacity=".18" stroke-width="5" stroke-linecap="round"/>
+
+  <rect width="520" height="680" fill="url(#edgeShade)"/>
+  <rect width="520" height="680" fill="url(#light)"/>
+</svg>

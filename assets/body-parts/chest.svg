@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 680" role="img" aria-label="Chest placement placeholder">
+  <defs>
+    <linearGradient id="skin" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f1cbb3"/>
+      <stop offset=".5" stop-color="#d39a7d"/>
+      <stop offset=".82" stop-color="#a86c55"/>
+      <stop offset="1" stop-color="#74483a"/>
+    </linearGradient>
+    <radialGradient id="light" cx="50%" cy="16%" r="76%">
+      <stop offset="0" stop-color="#fffaf2" stop-opacity=".52"/>
+      <stop offset=".62" stop-color="#fffaf2" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#080706" stop-opacity=".2"/>
+    </radialGradient>
+  </defs>
+  <rect width="520" height="680" fill="#151210"/>
+  <path d="M111 126c64-62 234-62 298 0 51 50 76 145 73 272-3 128-83 221-222 221S41 526 38 398c-3-127 22-222 73-272z" fill="url(#skin)"/>
+  <path d="M260 109c0 155 0 338 0 493" fill="none" stroke="#4d2d25" stroke-opacity=".35" stroke-width="5" stroke-linecap="round"/>
+  <path d="M105 244c51-43 116-57 155-13M415 244c-51-43-116-57-155-13" fill="none" stroke="#fffaf2" stroke-opacity=".24" stroke-width="7" stroke-linecap="round"/>
+  <path d="M121 280c47 43 100 50 139 22M399 280c-47 43-100 50-139 22" fill="none" stroke="#5c352c" stroke-opacity=".32" stroke-width="6" stroke-linecap="round"/>
+  <path d="M156 390c29 18 68 23 104 6M364 390c-29 18-68 23-104 6M133 474c70 42 184 42 254 0" fill="none" stroke="#3d241f" stroke-opacity=".2" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="177" cy="300" r="7" fill="#6b3d32" opacity=".38"/>
+  <circle cx="343" cy="300" r="7" fill="#6b3d32" opacity=".38"/>
+  <rect width="520" height="680" fill="url(#light)"/>
+</svg>
