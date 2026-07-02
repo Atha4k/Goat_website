@@ -1,4 +1,7 @@
 {
+  "framework": null,
+  "buildCommand": "mkdir -p dist && cp -R index.html works.html styles.css script.js model-viewer.js ambient-models.js assets public dist/",
+  "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [

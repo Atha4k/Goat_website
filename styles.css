@@ -437,6 +437,25 @@ textarea {
   display: block;
 }
 
+.machine-viewer__fallback {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(220px, 42vw);
+  height: auto;
+  transform: translate(-50%, -50%);
+  opacity: 0.92;
+  filter: drop-shadow(0 22px 34px rgba(0, 0, 0, 0.45));
+  transition: opacity 420ms ease, transform 420ms ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.machine-viewer.is-loaded .machine-viewer__fallback {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.96);
+}
+
 .machine-viewer.is-error {
   min-height: 180px;
   border: 1px solid rgba(255, 69, 79, 0.22);
